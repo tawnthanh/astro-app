@@ -22,7 +22,7 @@
 
 - Chat with friends through app (websockets)
 
-- Public or private profile only viewable to friends
+- Public or private profile
 
 
 ## Bonus Features
