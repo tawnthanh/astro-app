@@ -8,18 +8,16 @@ with app.app_context():
   # db.drop_all()
   db.create_all()
 
-  ian = User(username = 'Ian', email = 'ian@aa.io')
-  javier = User(username = 'Javier', email = 'javier@aa.io')
-  dean = User(username = 'Dean', email = 'dean@aa.io')
-  angela = User(username = 'Angela', email = 'angela@aa.io')
-  soonmi = User(username = 'Soon-Mi', email = 'soonmi@aa.io')
-  alissa = User(username = 'Alissa', email = 'alissa@aa.io')
+  tawn = User(username = 'Tawn', email= 'tawn@aa.io', hashed_password= 'password', \
+              birth_month='December', birth_day=2. birth_year=1991, birth_hour=7, \
+              birth_minutes=31, birth_am_pm='am', state_id=12, city='melrose')
+  mishe = User(username = 'Mishe', email= 'mishe@aa.io', hashed_password= 'password', \
+              birth_month='December', birth_day=2. birth_year=1991, birth_hour=7, \
+              birth_minutes=31, birth_am_pm='am', state_id=12, city='melrose')
 
-  db.session.add(ian)
-  db.session.add(javier)
-  db.session.add(dean)
-  db.session.add(angela)
-  db.session.add(soonmi)
-  db.session.add(alissa)
+
+  db.session.add(tawn)
+  db.session.add(mishe)
+
 
   db.session.commit()

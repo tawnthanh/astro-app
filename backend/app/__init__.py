@@ -7,9 +7,15 @@ from flask_migrate import Migrate
 from .models import db, User
 from .api.user_routes import user_routes
 
+from .seeds import seed_commands
 from .config import Config
 
+
 app = Flask(__name__)
+
+# Tell flask about our seed commands
+app.cli.add_command(seed_commands)
+
 app.config.from_object(Config)
 app.register_blueprint(user_routes, url_prefix='/api/users')
 db.init_app(app)
